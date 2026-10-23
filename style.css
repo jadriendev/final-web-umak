@@ -1,0 +1,419 @@
+:root {
+	--navy: #07265C;
+	--deep: #04122B;
+	--gold: #E4C45B;
+	--orange: #E27D26;
+	--soft: #F3F6FB;
+	--muted: #4B5B79;
+	--line: #DDE4F0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+.max-width {
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+header {
+	background-color: var(--navy);
+	padding: 15px 20px;
+	border-bottom: 1px solid rgb(0, 255, 255, 0.15);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-left {
+	display: flex;
+	align-items: center;	
+	gap: 11px;
+	
+	img {
+		width: 46px;
+		height: auto;
+		object-fit: contain;
+	}
+	
+	h1 {
+		font-size: 1.3rem;
+		color: white;
+	}
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+nav {
+	display: flex;
+	gap: 30px;
+}
+
+.btn-register {
+	text-decoration: none;
+	color: inherit;
+	font-size: 1.1rem;
+	font-weight: 500;
+	background-color: var(--gold);
+	padding: 15px 30px;
+	border-radius: 8px;
+}
+
+.hero {
+	background-color: var(--navy);
+	padding: 100px 0;
+	min-height: 70vh;
+}
+
+.hero-img img {
+	width: 90px;
+	height: auto;
+	object-fit: contain;
+}
+
+.hero-img {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.hero-con {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 90px 0 40px 0;
+}
+
+.hero-con h4 {
+	color: var(--gold);
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 25px;
+}
+
+.divider {
+	height: 3px;
+	width: 3px;
+	background-color: var(--gold);
+	border-radius: 999px;
+}
+
+.hero-con h4::before {
+	content: "";
+	height: 3px;
+	background-color: var(--orange);
+	width: 25px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.hero-con h1 {
+	font-size: 6rem;
+	color: white;
+	text-align: center;	
+	
+	span {
+		color: var(--gold);
+	}
+}
+
+.hero-con p {
+	margin-top: 20px;
+	font-size: 1.4rem;
+	color: #D5DDEE;
+	max-width: 700px;
+	line-height: 2.2rem;
+	text-align: center;
+}
+
+.cta-btn {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	gap: 14px;
+}
+
+.btn-categories {
+	text-decoration: none;
+	color: white;
+	font-size: 1.1rem;
+	font-weight: 500;
+	border: 1px solid var(--orange);
+	padding: 15px 30px;
+	border-radius: 8px;
+}
+
+.sponsors {
+	padding: 30px 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+}
+
+.slide img {
+    width: 130px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.about {
+	padding: 96px 20px;
+}
+
+.about-con {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 64px;
+}
+
+.ccis-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ccis-logo img {
+	width: 450px;
+	height: auto;
+	object-fit: contain;
+}
+
+.ccis-text {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	
+	h4 {
+		font-size: .90rem;
+		letter-spacing: 2px;
+		color: var(--muted);
+	}
+	
+	h4::before {
+		display: inline-block;
+		content: "";
+		height: 3px;
+		background-color: var(--orange);
+		width: 25px;
+		vertical-align: middle;
+		margin-right: 10px;	
+	}
+	
+	h2 {
+		margin-top: 10px;
+		font-size: 3rem;
+		max-width: 600px;
+		color: var(--navy);
+	}
+	
+	p {
+		color: var(--muted);
+		font-size: 1.1rem;
+		line-height: 1.8rem;
+		margin-top: 20px;
+	}
+	
+	p:nth-of-type(2) {
+		margin-top: 20px;
+	}
+	
+	a {
+		text-decoration: none;
+		color: inherit;
+		background-color: var(--gold);
+		width: fit-content;
+		font-size: 1.1rem;
+		font-weight: 600;
+		margin-top: 40px;
+		padding: 20px 30px;
+		border-radius: 10px;
+	}
+}
+
+.statistics {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 35px;
+	
+	div {
+		font-size: 2.5rem;
+		border-left: 3px solid var(--orange);
+		padding-left: 20px;
+		font-weight: 800;
+		color: var(--navy);
+		display: flex;
+		flex-direction: column;
+	}
+	
+	span {
+		margin-top: 10px;
+		font-size: 1rem;
+		font-weight: 500;
+		color: var(--muted);
+	}
+}
+
+.categories {
+	padding: 80px 20px;
+	background-color: #EEF0F3;
+}
+
+.head h3 {
+	display: flex;
+	align-items: center;
+	font-size: 1.3rem;
+	color: var(--navy);
+	font-weight: 700;
+	gap: 16px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.head h3::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background-color: #CBD3E2;
+}
+
+.categories-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	
+	h4 {
+		font-size: .90rem;
+		letter-spacing: 2px;
+		color: var(--muted);
+	}
+	
+	h4::before {
+		content: "";
+		display: inline-block;
+		height: 3px;
+		background-color: var(--orange);
+		width: 25px;
+		vertical-align: middle;
+		margin-right: 10px;	
+	}
+	
+	h2 {
+		font-size: 3rem;
+		color: var(--navy);
+		margin-top: 5px;
+	}
+	
+	p {
+		color: var(--muted);
+		font-size: 1.1rem;
+		max-width: 550px;
+		margin-top: 20px;
+		line-height: 1.8rem;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 20px;
+}
+
+.card {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid var(--line);
+	padding: 28px 24px;
+	border-radius: 12px;
+	
+	h2 {
+		font-size: 2rem;
+		color: var(--navy);
+		font-weight: 800;
+	}
+	
+	h3 {
+		font-size: 1.05rem;
+		line-height: 1.35;
+		color: var(--navy);
+		font-weight: 700;
+		margin-top: 10px;
+	}
+	
+	p {
+		color: var(--navy);
+		margin-top: 20px;
+	}
+}
+
+.grid-es {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.card-es {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid var(--line);
+	padding: 28px 24px;
+	border-radius: 12px;
+	
+	h2 {
+		font-size: 2rem;
+		font-weight: 800;
+		color: var(--orange);
+	}
+	
+	h3 {
+		font-size: 1.05rem;
+		line-height: 1.35;
+		color: var(--navy);
+		font-weight: 700;
+		margin-top: 10px;	
+	}
+	
+	p {
+		color: var(--navy);
+		margin-top: 15px;
+	}
+}
